@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - Overtime_development" uuid="bc69de6f-6612-43d0-afd9-9193727a3208">
+      <secret-storage>master_key</secret-storage>
+      <user-name>adammalinowski</user-name>
+    </data-source>
+    <data-source name="PostgreSQL - Overtime_test" uuid="0c83bc7e-2e03-481b-9e66-169ebf8cf12d">
+      <secret-storage>master_key</secret-storage>
+      <user-name>adammalinowski</user-name>
+    </data-source>
+  </component>
+</project>
