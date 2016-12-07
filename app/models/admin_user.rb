@@ -1,3 +1,3 @@
 class AdminUser < User
-  
+
 end
