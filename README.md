@@ -19,5 +19,5 @@
 - Bootstrap -> formatting
 
 ## Refactor TODOS:
-- Add full name to users in index view
+
 - Refactor user asscociation integration test in post_spec
