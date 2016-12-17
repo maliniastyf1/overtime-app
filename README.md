@@ -12,12 +12,14 @@
 - Approval Workflow
 - Sms sending -> link to approval or overtime input
 - Administrate admin dashboard
+- Block non admin and guest users
 - Email summary to managers for approval
 - Needs to be documented if employee did not log overtime
 
 ## UI:
-- Bootstrap -> formatting
-
+- x Bootstrap -> formatting
+- Icons from Front Awsome
+- x Update the styles for forms
 ## Refactor TODOS:
 
 - Refactor user asscociation integration test in post_spec
