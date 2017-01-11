@@ -24,6 +24,7 @@ class PostsController < ApplicationController
 
   def update
     authorize @post
+
     if @post.update(post_params)
       redirect_to @post, notice: 'Your post was updated successfully'
     else

@@ -19,3 +19,21 @@
 config/database.yml
 
 .idea/workspace.xml
+
+.idea/dataSources.ids
+
+.idea/dataSources.ids
+
+.idea/runConfigurations/test__Overtime.xml
+
+.idea/runConfigurations/spec__Overtime.xml
+
+.idea/dataSources.xml
+
+.idea/runConfigurations/Development__Overtime.xml
+
+.idea/runConfigurations/Production__Overtime.xml
+
+.idea/vcs.xml
+
+.idea/dataSources.ids
