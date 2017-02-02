@@ -4,7 +4,7 @@ describe 'navigate' do
   let(:user) { FactoryGirl.create(:user) }
 
   let(:post) do
-    Post.create(date: Date.today, rationale: "Rationale", user_id: user.id)
+    Post.create(date: Date.today, rationale: "Rationale", user_id: user.id, overtime_request: 2.5)
   end
 
   before do
@@ -23,15 +23,15 @@ describe 'navigate' do
     end
 
     it'has a list of posts' do
-      @post1 = Post.create( date: Date.today, rationale: "Post1", user_id: user.id)
-      @post2 = Post.create( date: Date.today, rationale: "Post2", user_id: user.id)
+      @post1 = Post.create( date: Date.today, rationale: "Post1", user_id: user.id, overtime_request: 2.5)
+      @post2 = Post.create( date: Date.today, rationale: "Post2", user_id: user.id, overtime_request: 2.5)
       visit posts_path
       expect(page).to have_content(/Post1|Post2/)
     end
 
     it 'has a scope so that only creator of a post can see it' do
       other_user = User.create(email: "other_user@test.com", password: "qwerty", password_confirmation: "qwerty", first_name: "Other", last_name: "User")
-      post_from_other_user = Post.create( date: Date.today, rationale: "This post should not be seen", user_id: other_user.id)
+      post_from_other_user = Post.create( date: Date.today, rationale: "This post should not be seen", user_id: other_user.id, overtime_request: 2.5)
 
       visit posts_path
 
@@ -56,7 +56,7 @@ describe 'navigate' do
       delete_user = FactoryGirl.create(:user)
       login_as(delete_user, :scope => :user)
 
-      post_to_delete = Post.create( date: Date.today, rationale: "Post to delete", user_id: delete_user.id)
+      post_to_delete = Post.create( date: Date.today, rationale: "Post to delete", user_id: delete_user.id, overtime_request: 2.5)
 
       visit posts_path
 
@@ -77,14 +77,16 @@ describe 'navigate' do
     it 'can be created from new form page' do
       fill_in 'post[date]', with: Date.today
       fill_in 'post[rationale]', with: "Some rationale"
-      click_on "Save"
+      fill_in 'post[overtime_request]', with: 4.3
 
-      expect(page).to have_content("Some rationale")
+
+      expect { click_on "Save" }.to change(Post, :count).by(1)
     end
 
     it 'will have user associated it' do
       fill_in 'post[date]', with: Date.today
       fill_in 'post[rationale]', with: "User_Association"
+      fill_in 'post[overtime_request]', with: 4.3
       click_on "Save"
 
       expect( User.last.posts.last.rationale ).to eq("User_Association")
