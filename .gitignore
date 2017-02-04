@@ -12,6 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/.env
 
 # ignore byebug command history file.
 .byebug_history
@@ -39,3 +40,4 @@ config/database.yml
 .idea/dataSources.ids
 
 .idea/dataSources.local.xml
+
