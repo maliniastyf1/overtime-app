@@ -35,7 +35,7 @@ describe 'navigate' do
                                password_confirmation: "qwerty",
                                first_name: "Other",
                                last_name: "User",
-                               phone: "+15555555555")
+                               phone: "0511111111")
 
       post_from_other_user = Post.create( date: Date.today, rationale: "This post should not be seen", user_id: other_user.id, overtime_request: 2.5)
 

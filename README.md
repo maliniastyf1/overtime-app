@@ -22,4 +22,4 @@
 - x Update the styles for forms
 ## Refactor TODOS:
 
-- Refactor user asscociation integration test in post_spec
+- Refactor PHONE_REGEX TO cut spaces

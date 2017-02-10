@@ -9,7 +9,7 @@ RSpec.describe Post, type: :model do
                          password_confirmation: "qwerty",
                          first_name: "Adam",
                          last_name: "Malyn",
-                         phone: "+48511111111")
+                         phone: "0511111111")
 
       login_as(user, :scope => :user)
       @post = Post.create( date: Date.today, rationale: "Anything", overtime_request: 2.5)
