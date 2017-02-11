@@ -2,8 +2,8 @@
                     password: "qwerty",
                     password_confirmation: "qwerty",
                     first_name: "Adam",
-                    last_name: "Malyn"
-                    phone: "+48513524104")
+                    last_name: "Malyn",
+                    phone: "799449722")
 
 puts "1 user created"
 
@@ -11,8 +11,8 @@ AdminUser.create(email: "myadmin@test.com",
                  password: "qwerty",
                  password_confirmation: "qwerty",
                  first_name: "Adam",
-                 last_name: "Malyn"
-                 phone: "+48513524104")
+                 last_name: "Malyn",
+                 phone: "799449722")
 
 puts "1 user and admin user created"
 
