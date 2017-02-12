@@ -1,2 +1,20 @@
-%h1 Audit Logs Index page
-= render @audit_logs
+%h1 Audit Logs Dashboard
+
+%table.table.table-striped.table-hover
+  %thead
+    %tr
+      %th
+        \#
+      %th
+        Emploee
+      %th
+        Week Starting
+      %th
+        Confirmed at
+      %th
+        Status
+      %th
+
+  %tbody
+    = render @audit_logs
+
