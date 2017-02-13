@@ -18,7 +18,8 @@ puts "1 admin user created"
 
 100.times do |post|
   Post.create!(date: Date.today,
-               rationale: "#{post} rationel content",
+               rationale: "#{post} rationel contentNeque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                Nie ma nikogo, kto lubiłby ból dla samego bólu, szukał go tylko po to, by go poczuć, po prostu dlatego, że to ból",
                user_id: @user.id,
                overtime_request: 2.5)
 end
